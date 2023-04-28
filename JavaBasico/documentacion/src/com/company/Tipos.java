@@ -39,7 +39,7 @@ public class Tipos {
     // Enteros
     Integer numero = null;  // Acá si se permite la asignación de un valor nulo ya que no es tipo de dato primitivo
     Long numero2 = 2L;
-    
+
 
   }
 }

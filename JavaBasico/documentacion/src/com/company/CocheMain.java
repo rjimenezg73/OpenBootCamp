@@ -21,8 +21,8 @@ public class CocheMain {
     System.out.println(cocheElectrico);
 
     CocheElectrico cocheElectrico2 = new CocheElectrico("Azul","Alfa", "Romeo", 1250.56, 3.9,"Motor Nueva Generación");
+    System.out.println(cocheElectrico2);
     cocheElectrico2.acelerar(40);
     System.out.println(cocheElectrico2);
-
   }
 }

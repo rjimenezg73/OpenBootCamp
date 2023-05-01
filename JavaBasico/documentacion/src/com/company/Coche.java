@@ -28,7 +28,9 @@ public class Coche {
 
   // Métodos (Comportamiento de un coche, de la clase)
   public void acelerar(Integer cantidad){
-    this.velocidad += cantidad;
+    if(cantidad > 0 && cantidad <= 120){
+      this.velocidad += cantidad;
+    }
   }
 
   @Override

@@ -1,0 +1,20 @@
+Funcion Suma(int a, int b, int c){
+  int resultado
+  resultado = a + b + c
+  Imprimir resultado
+}
+
+Coche{
+  int puertas = 0
+
+  Function AgregaPuertas(int n){
+    this.puertas = puertas + n
+  }
+}
+
+Main
+  Suma(4, 7, 3)
+  Coche miCoche = new Coche
+  miCoche.AgregaPuertas(2)
+  Imprime miCoche.puertas
+EndMain

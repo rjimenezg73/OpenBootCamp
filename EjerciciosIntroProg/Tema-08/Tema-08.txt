@@ -1,0 +1,49 @@
+Clase Persona{
+  Privada Entero edad
+  Privada Texto nombre
+  Privada Texto telefono
+
+  Publica Entero getEdad{
+    Regresa this.edad
+  }
+
+  Publica Texto getNombre{
+      Regresa this.nombre
+  }
+
+  Publica Texto getTelefono{
+      Regresa this.telefono
+  }
+
+  Publica void setEdad(valor){
+    this.edad = valor
+  }
+
+  Publica void setNombre(valor){
+    this.nombre = valor
+  }
+
+  Publica void setTelefono(valor){
+    this.telefono = valor
+  }
+
+  Publica imprimePersona{
+    Imprime this.nombre
+    Imprime this.edad
+    Imprime this.telefono
+  }
+}
+
+Main{
+  Persona persona = new Persona()
+
+  persona.setNombre("Juan")
+  persona.setEdad(40)
+  persona.setTelefono("456-45-47")
+
+  Imprime persona.getEdad
+  Imprime persona.getNombre
+  Imprime persona.getTelefono
+
+  Imprime imprimePersona()
+}

@@ -1,0 +1,41 @@
+Main
+  
+  int numeroIf = 5
+  if numeroIf > 0
+    Imprime "El numero es positivo"
+  else
+    if numeroIf < 0
+      Imprime "El numero es negativo"
+    else 
+      Imprime "El numero es cero"
+
+  int numeroWhile = 0
+  while numeroWhile < 3{
+    Imprime numeroWhile
+    numeroWhile++
+  }
+
+  int numeroDoWhile = 3
+  do{
+    Imprime numeroDoWhile
+    numeroDoWhile++
+  }while numeroDoWhile < 3
+
+  for(numeroFor = 0; numeroFor <= 3; numeroFor++){
+    Imprime numeroFor
+  }
+
+  Cadena estacion = "Primavera"
+  switch(estacion)
+    "Primavera":  Imprime "La estacion es Primavera"
+                  break
+    "Invierno":   Imprime "La estacion es Invierno"
+                  break
+    "Otoño":      Imprime "La estacion es Otoño"
+                  break
+    "Verano":     Imprime "La estacion es Verano"
+                  break
+    default:      Imprime "La estacion no es valida"
+  endSwitch
+  
+EndMain

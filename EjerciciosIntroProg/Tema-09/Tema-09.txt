@@ -1,0 +1,40 @@
+Clase Persona{
+  Privada Entero edad
+  Privada Texto nombre
+  Privada Texto telefono
+}
+
+Clase Cliente HeredaDe Persona{
+  Flotante credito
+}
+
+Clase Trabajador HeredaDe Persona{
+  Flotante salario
+}
+
+Main{
+  Cliente cliente = new Cliente()
+  Trabajador trabajador = new Trabajador()
+  
+  cliente.nombre = "Juan"
+  cliente.rdad = 40
+  cliente.telefono = "456-45-47"
+  cliente.credito = 345.43
+
+  Imprime cliente.persona
+  Imprime cliente.edad
+  Imprime cliente.telefono
+  Imprime cliente.credito
+
+
+  trabajador.nombre = "Peter"
+  trabajador.rdad = 50
+  trabajador.telefono = "557-32-54"
+  trabajador.salario = 45.43
+
+  Imprime trabajador.persona
+  Imprime trabajador.edad
+  Imprime trabajador.telefono
+  Imprime trabajador.salario
+
+}

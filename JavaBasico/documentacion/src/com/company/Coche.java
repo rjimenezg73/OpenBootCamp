@@ -14,6 +14,8 @@ public class Coche {
   // Si no se agrega ninguno habrá por defecto un constructor vacío.
   // El método constructor tiene el mismo nombre de la clase
 
+  // Un constructor puede ser vacío. De no definirse se crea por default para permitir la instancia de los
+  // objetos a utilizar con new
   public Coche(){
 
   }

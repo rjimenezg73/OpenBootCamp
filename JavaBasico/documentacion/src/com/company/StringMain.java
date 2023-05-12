@@ -26,7 +26,7 @@ public class StringMain {
       System.out.println("Los textos no son iguales");
     }
 
-    
+
 
 
   }

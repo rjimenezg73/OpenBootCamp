@@ -8,13 +8,14 @@ public class Vehiculo {
   /**
    * Atributos
    */
-  String facricante;
-  String modelo;
-  Double cc; // cc - centímetro cúbicos. Double es un tipo de dato envoltorio. La diferencia con los tipos de datos
+  protected String facricante;
+  protected String modelo;
+  protected Double cc; // cc - centímetro cúbicos. Double es un tipo de dato envoltorio. La diferencia con los tipos de datos
               // primitivos es que permite que sus valores puedan ser nulos, esto es especialmente beneficioso cuando trabajamos con DB
-  int year;
-  boolean sport;
-  int speed = 0;
+              protected int year;
+  protected boolean sport;
+  protected int speed = 0;
+  protected Motor motor;
 
   /**
    * Constructores
@@ -24,13 +25,16 @@ public class Vehiculo {
   }
 
   // Constructores con sobre carga
-  public Vehiculo(String facricante, String modelo, Double cc, int year, boolean sport){
+
+
+  public Vehiculo(String facricante, String modelo, Double cc, int year, boolean sport, int speed, Motor motor) {
     this.facricante = facricante;
     this.modelo = modelo;
     this.cc = cc;
     this.year = year;
     this.sport = sport;
-    this.speed = 0;
+    this.speed = speed;
+    this.motor = motor;
   }
 
   public Vehiculo(String facricante, int year) {

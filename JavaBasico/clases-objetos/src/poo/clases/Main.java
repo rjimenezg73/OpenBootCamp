@@ -10,7 +10,8 @@ public class Main {
     Vehiculo toyotaPrius = new Vehiculo();
 
     // Crear un objeto utilizando el constructor con parámetros
-    Vehiculo fordMondeo = new Vehiculo("Ford", "Mondeo", 2.1, 2010, false);
+    Motor motorGTI = new Motor("GTI", 190, 459.0, 6);
+    Vehiculo fordMondeo = new Vehiculo("Ford", "Mondeo", 2.1, 2010, false, 0, motorGTI);
     System.out.println(fordMondeo.facricante);
     System.out.println(fordMondeo.modelo);
     System.out.println(fordMondeo.speed);

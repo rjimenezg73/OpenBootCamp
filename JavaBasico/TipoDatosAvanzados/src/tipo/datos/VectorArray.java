@@ -14,7 +14,7 @@ public class VectorArray {
     // int arrayUno[] = {1, 2, 3, 4, 5};
     // La desventaja de los arrays es que si hemos definido su longitud no podemos agrandar o disminuir
     // su tamaño
-    // Los arrays no solamente son unidimensionales, pueden tener las dimensiones que deseemos.  
+    // Los arrays no solamente son unidimensionales, pueden tener las dimensiones que deseemos.
 
     for (int i: arrayUno) {
       System.out.println(i);

@@ -23,7 +23,7 @@ public class CadenaTexto {
     char letra = cadena.charAt(5);
     System.out.println(letra);
 
-    
+
 
   }
 }

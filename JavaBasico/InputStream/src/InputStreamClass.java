@@ -1,7 +1,4 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class InputStreamClass {
   public static void main(String[] args) {
@@ -9,12 +6,14 @@ public class InputStreamClass {
 
     try{
       InputStream fichero = new FileInputStream(rutaFichero);
+      BufferedInputStream ficheroBuffer = new BufferedInputStream(fichero);
       System.out.println("OK");
       // Lo leyó perfectamente, pero para ver su contenido se necesita invocar uno de sus métodos
       try{
-        byte []datos = fichero.readAllBytes();
-        for (byte dat: datos) {
-          System.out.print((char)dat);
+        int dato = ficheroBuffer.read();
+        while(dato != -1){  // -1 = EOF
+          System.out.print((char)dato);
+          dato = ficheroBuffer.read();
         }
       }catch(IOException e){
         System.out.println("No puedo leer el fichero: " + e.getMessage());

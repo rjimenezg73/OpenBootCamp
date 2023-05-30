@@ -10,7 +10,7 @@
 package com.open.bootcamp;
 
 
-public class Main {
+public class PseudoFun {
 
    private static int contador = 0;
 

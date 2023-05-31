@@ -31,7 +31,9 @@ public class FuncionesAltoNivelMain {
 
       // ¿Cómo convertir un arreglo de enteros a Stream para poder iterar?
       int []numeros = {1,2,3,4,5,6,7,8,9,10};
-      var streamNumeros = Arrays.stream(numeros);
+      var streamNumeros = Arrays.stream(numeros).filter(x -> x % 2 == 0);
+
+
       streamNumeros.forEach(x -> System.out.print(x + ", "));
 
    }

@@ -15,7 +15,14 @@ public class FuncionesAltoNivelMain {
       nombres.add("Paco");
       nombres.add("Luis");
 
-      Stream<String> valores = nombres.stream().map(x -> x.toUpperCase());
+      //Stream<String> valores = nombres.stream().map(x -> "Hola, " + x.toUpperCase());
+
+      //Una Manera más clara de entender y con el mismo resultado de arrib
+      Stream<String> valores = nombres.stream().map((x) -> {
+         return "Hola, " + x.toUpperCase();
+      });
+
+      
       valores.forEach(x -> System.out.println(x));
 
    }

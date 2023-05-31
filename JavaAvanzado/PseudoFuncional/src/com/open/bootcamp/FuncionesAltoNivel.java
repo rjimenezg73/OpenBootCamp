@@ -16,7 +16,7 @@ public class FuncionesAltoNivel {
     *             <R> – the type of the result of the function
     */
 
-   private Function<Integer, Integer> sumador = (x) -> x.sum(x, x+2);
+   private Function<Integer, Integer> sumador = (x) -> x.sum(x, x+3);
 
 
 

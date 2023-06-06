@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class BootcamperService {
    // Hagamos que el BootcamperService contenga una lista de Bootcampers(usuarios)
-   private final List<Bootcamper> bootcampers = new ArrayList();
+   private final List<Bootcamper> bootcampers = new ArrayList<Bootcamper>();
 
    // Implementar un método que nos retorne todos los usuarios
    public List<Bootcamper> getAll(){

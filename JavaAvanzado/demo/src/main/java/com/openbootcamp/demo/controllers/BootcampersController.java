@@ -2,12 +2,14 @@ package com.openbootcamp.demo.controllers;
 
 import com.openbootcamp.demo.models.Bootcamper;
 import com.openbootcamp.demo.services.BootcamperService;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
+import org.apache.coyote.Response;
 import org.springframework.stereotype.Component;
 
+import java.net.URI;
 import java.util.List;
+
+import static org.apache.coyote.Response.*;
 
 // Debemos configurar éste controlador diciendo a Spring que ésta clase es un componente
 // También debemos indicar qué es lo que va a procesar---- Barrita (path)
@@ -23,11 +25,11 @@ public class BootcampersController {
       this.bootcamperService = bootcamperService;
 
       // Lo que sigue no se debe de hacer, solo se hace para visualizar algo en el navegador
-      this.bootcamperService.add(new Bootcamper("uno"));
-      this.bootcamperService.add(new Bootcamper("dos"));
-      this.bootcamperService.add(new Bootcamper("tres"));
-      this.bootcamperService.add(new Bootcamper("cuatro"));
-      this.bootcamperService.add(new Bootcamper("cinco"));
+      this.bootcamperService.add(new Bootcamper("uno", Math.random()));
+      this.bootcamperService.add(new Bootcamper("dos", Math.random()));
+      this.bootcamperService.add(new Bootcamper("tres", Math.random()));
+      this.bootcamperService.add(new Bootcamper("cuatro", Math.random()));
+      this.bootcamperService.add(new Bootcamper("cinco", Math.random()));
    }
 
    @GET
@@ -36,5 +38,18 @@ public class BootcampersController {
    public List<Bootcamper> listarTodos(){
       return bootcamperService.getAll();
    }
+
+   @POST
+   @Path("/bootcampers")
+   @Produces("application/json")
+   @Consumes("application/json")
+   public Response meterBootcamper(Bootcamper bootcamper){
+      this.bootcamperService.add(bootcamper);
+
+      return Response.created(
+              URI.create("/bootcampers/" + bootcamper.getNombre())
+      ).build();
+   }
+
 
 }

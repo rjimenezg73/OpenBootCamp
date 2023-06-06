@@ -5,7 +5,9 @@ package com.openbootcamp.demo.services;
 // Los servicios son la parte lógica de nuestros sistemas
 
 import com.openbootcamp.demo.models.Bootcamper;
-import org.jvnet.hk2.annotations.Service;
+// Segun foro eliminar ésta línea: import org.jvnet.hk2.annotations.Service;
+// y agregar la linea de abajo
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ import java.util.List;
 @Service
 public class BootcamperService {
    // Hagamos que el BootcamperService contenga una lista de Bootcampers(usuarios)
-   private List<Bootcamper> bootcampers = new ArrayList();
+   private final List<Bootcamper> bootcampers = new ArrayList();
 
    // Implementar un método que nos retorne todos los usuarios
    public List<Bootcamper> getAll(){
